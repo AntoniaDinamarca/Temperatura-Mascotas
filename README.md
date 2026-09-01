@@ -36,5 +36,4 @@ El usuario principal son los dueños de perros. El dispositivo está pensado par
 ## Índice de la bitácora
 
 - [S01 - Entrega 01](bitacora/S01.md)
-- [S02 - Entrega 02](bitacora/S02.md)
-- [S03 - Entrega 03](bitacora/S03.md)
+
