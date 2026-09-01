@@ -2,7 +2,7 @@
 
 ## dispositivos lowtech e interfaces interactivas 
 
-**Equipo:** [Nombre del equipo]  
+**Equipo:** Los Firulais  
 **Problematica:** Temperatura ambiental y bienestar de mascotas  
 
 ![Foto del equipo](imagenes/S01/foto-equipo.jpg)
