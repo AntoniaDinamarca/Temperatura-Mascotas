@@ -1,0 +1,312 @@
+# Prototipos Luces Led
+### Elementos
+-Luces LED rojo, verde y azul
+
+-Cables macho-macho
+
+-Resistencias 220
+
+**Primer prototipo**
+
+```
+#define LED_AZUL 4
+
+#define LED_VERDE 5
+
+#define LED_ROJO 6
+
+void setup() {
+ 
+  pinMode(LED_AZUL, OUTPUT);
+  
+  pinMode(LED_VERDE, OUTPUT);
+  
+  // pinMode(LED_ROJO, OUTPUT);
+
+}
+
+void loop() {
+  
+  // Secuencia LED Azul
+  
+  digitalWrite(LED_AZUL, HIGH);
+ 
+  delay(1000);
+  
+  digitalWrite(LED_AZUL, LOW);
+
+  // Secuencia LED Verde
+ 
+  digitalWrite(LED_VERDE, HIGH);
+ 
+  delay(1000);
+
+  // Secuencia LED Rojo
+ 
+  digitalWrite(LED_ROJO, HIGH);
+  
+  delay(1000);
+  
+  digitalWrite(LED_ROJO, LOW);
+
+}
+```
+
+**Segundo Prototipo**
+
+```
+#define LED_AZUL 3
+
+#define LED_VERDE 4
+
+#define LED_ROJO 5
+
+void setup() {
+
+  pinMode(LED_AZUL, OUTPUT);
+ 
+  pinMode(LED_VERDE, OUTPUT);
+ 
+  pinMode(LED_ROJO, OUTPUT);
+
+}
+
+void loop() {
+
+  digitalWrite(LED_AZUL, HIGH);
+  
+  delay(1000);
+ 
+  digitalWrite(LED_AZUL, LOW);
+
+  digitalWrite(LED_VERDE, HIGH);
+ 
+  delay(1000);
+  
+  digitalWrite(LED_VERDE, LOW);
+
+  digitalWrite(LED_ROJO, HIGH);
+  
+  delay(1000);
+  
+  digitalWrite(LED_ROJO, LOW);
+
+}
+```
+
+# Prototipo DHT11
+
+Elementos
+
+-DHT11
+
+-Cables macho-hembra
+
+**Primer prototipo**
+
+```
+#include <DHT.h>
+
+#define DHTPIN 10 
+#define DHTTYPE DHT11
+
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() {
+  Serial.begin(9600);
+
+  Serial.println("Iniciando DHT11...");
+}
+
+void loop() {
+  float temperatura = dht.readTemperature();
+  float humedad = dht.readHumidity();
+
+  } 
+  else {
+    Serial.print("Temperatura: ");
+    Serial.print(temperatura);
+    Serial.println(" °C");
+
+    Serial.print("Humedad: ");
+    Serial.print(humedad);
+    Serial.println(" %");
+
+    Serial.println("----------------");
+  }
+
+  delay(2000);
+}
+```
+
+**Segundo prototipo**
+
+```
+#include <DHT.h>
+
+#define DHTPIN 2
+#define DHTTYPE DHT11
+
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() {
+  Serial.begin(9600);
+  dht.begin();
+
+  Serial.println("Iniciando DHT11...");
+}
+
+void loop() {
+
+  float temperatura = dht.readTemperature();
+  float humedad = dht.readHumidity();
+
+  if (isnan(temperatura) || isnan(humedad)) {
+    Serial.println("ERROR: no se pudo leer el DHT11");
+  } 
+  else {
+    Serial.print("Temperatura: ");
+    Serial.print(temperatura);
+    Serial.println(" °C");
+
+    Serial.print("Humedad: ");
+    Serial.print(humedad);
+    Serial.println(" %");
+
+    Serial.println("----------------");
+  }
+
+  delay(2000);
+}
+```
+# Prototipo pantalla OLED
+
+Elementos
+
+-Pantalla OLED 
+
+-Cables macho-hembra
+
+**Primer prototipo**
+
+```
+#include <Wire.h>
+#include <U8g2lib.h>
+
+U8G2_SH1106_128X64_NONAME_F_HW_I2C oled(U8G2_R0, U8X8_PIN_NONE);
+
+void setup() {
+  // oled.begin();
+
+  oled.clearBuffer();
+  oled.setFont(u8g2_font_6x10_tf);
+
+  oled.drawStr(0, 20, "PRIMERA PRUEBA");
+  oled.drawStr(0, 40, "UWU");
+
+  // oled.sendBuffer();
+}
+
+void loop() {
+}
+```
+
+**Segundo prototipo**
+
+```
+#include <Wire.h>
+#include <U8g2lib.h>
+
+U8G2_SH1106_128X64_NONAME_F_HW_I2C oled(U8G2_R0, U8X8_PIN_NONE);
+
+void setup() {
+  oled.begin();
+  oled.clearBuffer();
+
+  // oled.setFont(u8g2_font_6x10_tf);
+
+  oled.drawStr(0, 0, "PRIMERA PRUEBA");
+  oled.drawStr(0, 0, "UWU");
+
+  oled.sendBuffer();
+}
+
+void loop() {
+}
+```
+
+**Tercer prototipo**
+
+```
+#include <Wire.h>
+#include <U8g2lib.h>
+
+U8G2_SH1106_128X64_NONAME_F_HW_I2C oled(U8G2_R0, U8X8_PIN_NONE);
+
+void setup() {
+  oled.begin();
+
+  oled.clearBuffer();
+  oled.setFont(u8g2_font_6x10_tf);
+
+  oled.drawStr(0, 20, "PRIMERA PRUEBA");
+  oled.drawStr(0, 40, "UWU");
+
+  oled.sendBuffer();
+}
+
+void loop() {
+}
+```
+
+## Prototipo buzzer
+
+Elementos
+
+-Buzzer
+
+-Cables macho-hembra
+
+**Primer prototipo**
+
+```
+#define BUZZER 8
+
+void setup() {
+  // ERROR INTENCIONAL 2: Se omitió inicializar el pin como salida.
+  // Al no ejecutar pinMode(BUZZER, OUTPUT), el pin queda en modo INPUT 
+  // y no entregará la corriente necesaria para activar el buzzer.
+  // pinMode(BUZZER, OUTPUT);
+}
+
+void loop() {
+  // ERROR LÓGICO INTENCIONAL 3 (Para Buzzer Active Low):
+  // Al ser un buzzer que se activa en BAJO (LOW), escribir HIGH lo silenciará 
+  // durante el primer segundo y escribir LOW lo encenderá en el segundo,
+  // invirtiendo por completo el patrón de inicio deseado.
+  digitalWrite(BUZZER, HIGH);
+  delay(1000);
+
+  digitalWrite(BUZZER, LOW);
+  delay(1000);
+}
+```
+
+**Segundo Prototipo**
+
+```
+#define BUZZER 8
+
+void setup() {
+  pinMode(BUZZER, OUTPUT);
+}
+
+void loop() {
+
+  digitalWrite(BUZZER, HIGH);
+  delay(1000);
+
+  digitalWrite(BUZZER, LOW);
+  delay(1000);
+}
+```
