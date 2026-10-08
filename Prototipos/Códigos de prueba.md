@@ -279,17 +279,10 @@ Elementos
 #define BUZZER 8
 
 void setup() {
-  // ERROR INTENCIONAL 2: Se omitió inicializar el pin como salida.
-  // Al no ejecutar pinMode(BUZZER, OUTPUT), el pin queda en modo INPUT 
-  // y no entregará la corriente necesaria para activar el buzzer.
   // pinMode(BUZZER, OUTPUT);
 }
 
 void loop() {
-  // ERROR LÓGICO INTENCIONAL 3 (Para Buzzer Active Low):
-  // Al ser un buzzer que se activa en BAJO (LOW), escribir HIGH lo silenciará 
-  // durante el primer segundo y escribir LOW lo encenderá en el segundo,
-  // invirtiendo por completo el patrón de inicio deseado.
   digitalWrite(BUZZER, HIGH);
   delay(1000);
 
