@@ -93,6 +93,7 @@ void loop() {
 
 }
 ```
+![Prueba de luces LED](Prueba-LucesLed.jpeg)
 
 # Prototipo DHT11
 
@@ -179,6 +180,9 @@ void loop() {
   delay(2000);
 }
 ```
+
+![Prueba DHT11](Prueba-DHT11.jpeg)
+
 # Prototipo pantalla OLED
 
 Elementos
@@ -259,6 +263,8 @@ void loop() {
 }
 ```
 
+![Prueba de pantalla](Prueba-Pantalla.jpeg)
+
 ## Prototipo buzzer
 
 Elementos
@@ -310,3 +316,4 @@ void loop() {
   delay(1000);
 }
 ```
+![Prueba Buzzer](Prueba-Buzzer.jpeg)
