@@ -1,7 +1,7 @@
-Para poder probar estos códigos se necesita un USB CH340G, LilyPad, Sensor AHT20, luz LED RGB, cables macho-hembra y hembra-hembra.
+Para poder probar estos códigos se necesita un USB CH340G, LilyPad, Sensor AHT20, luz LED RGB, cables macho-hembra y hembra-hembra. En el Arduino hay que descargar en la biblioteca Wire.h, Adafruit_AHTX0.h, Adafruit_Sensor.h
 
 
-Prueba Sensor AHT20
+**Prueba Sensor AHT20**
 
 ```
 #include <Wire.h>
@@ -37,9 +37,9 @@ void loop() {
   delay(1000); // Lee datos cada 1 segundo
 }
 ```
-Para que funcione en el Arduino tiene que estar a 19200 baud
+*Para que funcione en el Arduino tiene que estar a 19200 baud*
 
-Prueba Luz LED RGB y Sensor AHT20
+**Prueba Luz LED RGB y Sensor AHT20**
 
 ```
 #include <Wire.h>
@@ -47,7 +47,6 @@ Prueba Luz LED RGB y Sensor AHT20
 
 Adafruit_AHTX0 aht;
 
-// Definición de pines para el módulo RGB (Cátodo Común)
 const int PIN_ROJO  = 2;
 const int PIN_VERDE = 3;
 const int PIN_AZUL  = 4;
@@ -56,7 +55,6 @@ const int PIN_AZUL  = 4;
 const float UMBRAL_FRIO = 20.0;
 const float UMBRAL_CALOR = 28.0;
 
-// Función auxiliar para fijar el color del LED RGB
 void fijarColorRGB(bool rojo, bool verde, bool azul) {
   digitalWrite(PIN_ROJO,  rojo  ? HIGH : LOW);
   digitalWrite(PIN_VERDE, verde ? HIGH : LOW);
@@ -66,7 +64,6 @@ void fijarColorRGB(bool rojo, bool verde, bool azul) {
 void setup() {
   Serial.begin(9600);
 
-  // Configurar pines de color como salidas
   pinMode(PIN_ROJO, OUTPUT);
   pinMode(PIN_VERDE, OUTPUT);
   pinMode(PIN_AZUL, OUTPUT);
