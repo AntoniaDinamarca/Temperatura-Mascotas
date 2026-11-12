@@ -53,5 +53,5 @@ Esta guía documenta el procedimiento físico de intervención del arnés canino
 ---
 
 🔗 **Navegación:**  
-* ⬅️ [Volver a la Guía de Conexiones Eléctricas](../conexiones/README.md)  
-* 🏠 [Volver al Índice General de Armado](../README.md)
+* ⬅️ [Volver a la Guía de Conexiones Eléctricas](Conexiones.md)  
+* 🏠 [Volver al Inicio](../README.md)
