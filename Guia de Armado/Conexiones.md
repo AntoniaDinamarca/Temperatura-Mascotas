@@ -45,5 +45,5 @@ Esta sección detalla el mapa de conexiones, especificaciones de pines (*pinout*
 ---
 
 🔗 **Navegación:**  
-* ⬅️ [Volver al Índice General de Armado](../GuiadeArmado)  
-* ➡️ [Ir a la Guía de Costura y Confección E-Textil](../costura)
+* ⬅️ [Volver al Inicio](../README.md)  
+* ➡️ [Ir a la Guía de Costura y Confección E-Textil](costura.md)
