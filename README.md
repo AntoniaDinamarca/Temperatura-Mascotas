@@ -97,5 +97,9 @@ Para mantener la ligereza y adaptabilidad al cuerpo del perro, se utilizaron com
 - [S02 - Entrega 02](bitacora/S02.md)
 - [S03 - Entrega 03](bitacora/S03.md)
 
+## Licencia
 
+Este proyecto es de código abierto y está liberado bajo la **[Licencia MIT](LICENSE)**. Puedes usar, modificar y distribuir el código, esquemas y diseño del arnés libremente, siempre que se mantengan los créditos de la autoría original.
+
+© 2026 **Equipo Los Firulais** — Antonia Dinamarca & Luka Morales.
 
