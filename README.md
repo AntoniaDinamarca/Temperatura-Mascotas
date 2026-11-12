@@ -1,17 +1,17 @@
-# Monitoreo Térmico Canino: Arnés E-Textil con Alerta Semafórica
+<div align="center">
 
-Sistema vestible autónomo e interactivo diseñado para traducir las condiciones de temperatura del entorno directo de un perro en señales de luz intuitivas, previniendo el estrés térmico y el golpe de calor.
+# 🐾 Arnés Canino con Alerta Semafórica Térmica
+**Dispositivo E-Textile autónomo para la prevención del golpe de calor en mascotas**
 
-* **Asignatura:** Dispositivos Low-Tech e Interfaces Interactivas
-* **Equipo:** Los Firulais
-* **Licencia:** Open Source Hardware & Software (MIT / CERN OHL)
+![Estado](https://img.shields.io/badge/Estado-Prototipo_Funcional-2ea44f?style=for-the-badge)
+![Microcontrolador](https://img.shields.io/badge/Hardware-LilyPad_Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white)
+![Sensor](https://img.shields.io/badge/Sensor-AHT20_I2C-0969da?style=for-the-badge)
+![Licencia](https://img.shields.io/badge/Licencia-MIT-eab308?style=for-the-badge)
 
-## Equipo
+*Desarrollado por **Antonia Dinamarca** y **Luka Morales** — Equipo Los Firulais*
 
-| Integrantes |
-|---|
-| Antonia Dinamarca |
-| Luka Morales |
+</div>
+
 
 ---
 
