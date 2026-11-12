@@ -1,6 +1,6 @@
 # Monitoreo Térmico Canino: Arnés E-Textil con Alerta Semafórica
 
-Sistema vestible (*wearable*) autónomo e interactivo diseñado para traducir las condiciones de temperatura del entorno directo de un perro en señales de luz intuitivas, previniendo el estrés térmico y el golpe de calor (*heatstroke*).
+Sistema vestible autónomo e interactivo diseñado para traducir las condiciones de temperatura del entorno directo de un perro en señales de luz intuitivas, previniendo el estrés térmico y el golpe de calor.
 
 * **Asignatura:** Dispositivos Low-Tech e Interfaces Interactivas
 * **Equipo:** Los Firulais
@@ -15,7 +15,7 @@ Sistema vestible (*wearable*) autónomo e interactivo diseñado para traducir la
 
 ---
 
-## 📖 Descripción del Proyecto
+## Descripción del Proyecto
 
 Este proyecto aborda la comunicación entre el perro y su tutor mediante una interfaz e-textil no invasiva. Consiste en un arnés canino equipado con electrónica vestible que mide constantemente el microclima térmico en el que se encuentra la mascota. 
 
@@ -23,7 +23,7 @@ Dado que los perros no pueden manifestar verbalmente su incomodidad térmica has
 
 ---
 
-## 🩺 Problema y Contexto Biológico
+## Problema y Contexto Biológico
 
 ### 1. La Fisiología del Perro frente al Calor
 A diferencia de los seres humanos, los perros no poseen glándulas sudoríparas distribuidas por el cuerpo para regular su temperatura corporal. Su mecanismo principal de enfriamiento es el jadeo y la liberación de calor por las almohadillas de las patas. Esta limitación biológica provoca que:
@@ -43,7 +43,7 @@ La temperatura medida por una app del clima en el teléfono celular refleja la t
 
 ---
 
-## 👥 Usuarios y Escenarios de Uso
+## Usuarios y Escenarios de Uso
 
 ### Perfil de Usuario Principal (Tutores)
 * **Público objetivo:** Personas con mascotas que realizan paseos al aire libre, actividades deportivas, trayectos urbanos sobre asfalto o que dejan a sus perros en espacios del hogar con variaciones térmicas (patios, balcones, departamentos soleados).
@@ -59,7 +59,7 @@ La temperatura medida por una app del clima en el teléfono celular refleja la t
 
 ---
 
-## 🚦 Lógica de Funcionamiento (Semáforo de Alerta)
+##  Lógica de Funcionamiento (Semáforo de Alerta)
 
 El microcontrolador procesa la temperatura ambiental capturada por el sensor y conmuta el estado de la interfaz lumínica:
 
@@ -71,7 +71,7 @@ El microcontrolador procesa la temperatura ambiental capturada por el sensor y c
 
 ---
 
-## 🛠️ Especificaciones Técnicas de Hardware (BOM)
+##  Especificaciones Técnicas de Hardware (BOM)
 
 Para mantener la ligereza y adaptabilidad al cuerpo del perro, se utilizaron componentes e-textil y de bajo consumo:
 
@@ -83,7 +83,7 @@ Para mantener la ligereza y adaptabilidad al cuerpo del perro, se utilizaron com
 
 ---
 
-## 🧵 Integración E-Textil y Construcción Física
+##  Integración E-Textil y Construcción Física
 
 1. **Bolsillos de Protección:** La placa LilyPad y la batería se protegen en bolsillos de tela reforzada cosidos al arnés, evitando la fricción directa con el pelaje del animal.
 2. **Broches de Presión (*Snaps*) como Conectores:** El portabaterías utiliza broches metálicos que cumplen una doble función: actúan como puente eléctrico conductivo e interruptor desmontable para retirar la energía al lavar el arnés.
